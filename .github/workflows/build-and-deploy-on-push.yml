@@ -69,12 +69,12 @@ jobs:
     
     - name: Deploy to Sandbox
       env:
-        USERNAME: ${{ secrets.USERNAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
+        USERNAME: ${{ secrets.MULESOFT_USERNAME }}
+        PASSWORD: ${{ secrets.MULESOFT_PASSWORD }}
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy \
          -Dmule.artifact=$artifactName \
-         -Danypoint.username="$MULESOFT_USERNAME" \
-         -Danypoint.password="$MULESOFT_PASSWORD" \
+         -Danypoint.username="$USERNAME" \
+         -Danypoint.password="$PASSWORD" \
          -DskipTests
