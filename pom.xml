@@ -34,8 +34,8 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.4.0</muleVersion>
-						<username>$USERNAME</username>
-						<password>$PASSWORD</password>
+						<username>$MULESOFT_USERNAME</username>
+						<password>$MULESOFT_PASSWORD</password>
 						<applicationName>demo-customer-app-lala</applicationName>
 						<environment>Sandbox</environment>
 						<workerType>MICRO</workerType>
